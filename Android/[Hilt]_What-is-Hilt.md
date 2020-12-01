@@ -25,10 +25,12 @@ interface CarComponent {
 // 컴파일 타임에 DaggerCarComponent 클래스를 생성
 
 /* MainActivity.kt */
-@Inject lateinit var car: Car // 필드 주입
+class MainActivity {
+    @Inject lateinit var car: Car // 필드 주입
 
-val comp = DaggerCarComponent.create()
-comp.inject(this) // 메인 액티비티를 주입함
+    val comp = DaggerCarComponent.create()
+    comp.inject(this) // 메인 액티비티를 주입함
+}
 ```
 
 <br><br><br>
