@@ -10,11 +10,11 @@ Dagger 가 Component 를 통해서 주입 해 줄 것들이다. 함수, 변수 �
 
 ## Examples
 ### Constructor Injection
-```java
+```kotlin
 // Car.kt
 class Car {
     @Inject
-    constructor(engine: Engine, wheels: Wheels) {}
+    constructor() {}
 }
 
 // CarComponent.kt
@@ -32,10 +32,10 @@ val car = comp.getCar() // Car 을 가져옴
 ```
 
 ### Field Injection
-```java
+```kotlin
 // Car.kt
 class Car {
-    constructor(engine: Engine, wheels: Wheels) {}
+    constructor() {}
 }
 
 // CarComponent.kt
