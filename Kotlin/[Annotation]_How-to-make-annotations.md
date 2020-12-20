@@ -20,54 +20,8 @@ class Undertale {}
 어노테이션을 처리하는 프로세서를 만든다. <br>
 javax.annotation.processing.AbstractProcessor 를 상속한다. <br>
 구글의 AutoService 를 통해 자동으로 컴파일러에 등록 되게 할 수 있다.
-```kotlin
-@AutoService(Processor::class)
-class SansProcessor: AbstractProcessor() {
 
-  /* 어노테이션 클래스의 이름들을 넣는다. */
-  override fun getSupportedAnnotationTypes(): MutableSet<String> {
-    return mutableSetOf(
-      Wa::class.java.name
-    )
-  }
-  
-  /* 얘는 잘 모르겠다. */
-  override fun getSupportedSourceVersion(): SourceVersion {
-      return SourceVersion.latestSupported()
-  }
-  
-  /* 프로세서를 구현한다. (상속 필수) */
-  override fun process(annotations: MutableSet<out TypeElement>?, roundEnv: RoundEnvironment): Boolean {
-    roundEnv.getElementsAnnotatedWith(Wa::class.java) // Wa 어노테이션이 붙은 것들을 가져온다.
-    if (!checkElementType(ElementKind.CLASS, classElements)) return false // 클래스에 붙어있는건지 확인
-    
-    classElements.forEach {
-      // Process something!!!
-    }
-  }
-  
-  
-  
-  /* 타입 체크 하는 함수이다. */
-  private fun checkElementType(kind: ElementKind, elements: Set<Element>): Boolean {
-    if (elements.isEmpty()) return false
-
-    elements.forEach {
-      if (it.kind != kind) {
-        printMessage(
-          Diagnostic.Kind.ERROR, "Only ${kind.name} Are Supported", it
-        )
-        return false
-      }
-    }
-    return true
-  }
-
-  private fun printMessage(kind: Diagnostic.Kind, message: String, element: Element) {
-    processingEnv.messager.printMessage(kind, message, element)
-  }
-}
-```
+코드 참조 : [UselessProcessor.kt](https://github.com/pl-Steve28-lq/UselessThings/blob/master/UselessThings/src/main/java/com/steve28/uselessthings/annotations/UselessProcessor.kt)
 
 ## KotlinPoet
 코틀린 파일을 동적으로 작성하는 모듈이다. <br>
