@@ -109,7 +109,7 @@ class Ball(val size: Int) {
 }
 ```
 
-## 7. Make Fibonacci and BrainF**k compiler, or anything!
+## 7. Make Fibonacci and BrainF compiler, or anything!
 ```Python
 # Python
 # Fibonacci with Matrices, using Function, Array, (+ and Classes sometimes)
@@ -128,6 +128,7 @@ def fibo(n):
   powered = pow(mat, n)
   return powered[1]
 ```
+
 [Kotlin BrainF Compiler](https://github.com/pl-Steve28-lq/ProgrammingLanguages/blob/master/Kotlin/BrainFuck.kt)
 
 ## 8. Make toy project
