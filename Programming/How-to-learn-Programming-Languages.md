@@ -105,7 +105,7 @@ a.printSize()
 ```Kotlin
 // Kotlin
 class Ball(val size: Int) {
-  fun printSize() println("Size of this ball is $size!")
+  fun printSize() = println("Size of this ball is $size!")
 }
 ```
 
@@ -128,14 +128,9 @@ def fibo(n):
   powered = pow(mat, n)
   return powered[1]
 ```
+[Kotlin BrainF Compiler](https://github.com/pl-Steve28-lq/ProgrammingLanguages/blob/master/Kotlin/BrainFuck.kt)
 
-```Kotlin
-// Kotlin
-// BrainF**k language compiler, using Classes, Array, Branches
-```
-[Kotlin Source code is Here!](https://github.com/pl-Steve28-lq/ProgrammingLanguages/blob/master/Kotlin/BrainFuck.kt)
-
-## 8. Make toy project.
+## 8. Make toy project
 Find out what you need while making your programs! Google, StackOverflow is your best friends :)
 
 Python - [Project Keyboard](https://github.com/pl-Steve28-lq/Project-Keyboard)<br>
