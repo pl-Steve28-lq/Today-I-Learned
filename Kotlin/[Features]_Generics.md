@@ -14,7 +14,7 @@ class Something<T> (val item: T) {}
 fun <T: Number> plusOne(x: T) = x+1
 ```
 
-# in, out keyword
+# `in`, `out` Keyword
 ## in (Contravariance, 반변)
 ```kotlin
 interface Super<in T>
@@ -67,7 +67,7 @@ List<Int> 와 List<String> 은 모두 런타임에 Int, String 이라는 타입 
 둘다 List 타입이기 때문에 a as List<Int> 는 아무 문제없이 실행된다. <br>
 그러나 b.sum() 은 `ClassCastException` 을 일으킨다.
 
-## reified keyword
+## `reified` Keyword
 ```kotlin
 fun <T> getClassName() = T::class.java.name // Error
 ```
