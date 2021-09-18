@@ -60,6 +60,6 @@ fun invokeOnce(lambda: () -> Unit) {
 
 ## InvocationKind 의 종류
 > `InvocationKind.EXACTLY_ONCE` : 정확히 한번만 실행 <br>
-> `Invocationkind.AT_LEAST_ONCE` : 한번 이상 실 <br>
+> `Invocationkind.AT_LEAST_ONCE` : 한번 이상 실행 <br>
 > `InvocationKind.AT_MOST_ONCE` : 실행되지 않거나 한번 실행 <br>
 > `InvocationKind.UNKNOWN` : 알 수 없음
